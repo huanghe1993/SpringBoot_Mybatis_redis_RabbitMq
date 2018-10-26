@@ -17,4 +17,22 @@
         VALUES(#{lastName},#{gender},#{email},#{dId})
     </insert>
 
+    <!--public void updateEmp(Employee employee);-->
+    <update id="updateEmp" parameterType="com.huanghe.springboot.bean.Employee">
+        UPDATE employee SET lastName=#{lastName},email=#{email},gender=#{gender},d_id=#{dId} where id=#{id}
+    </update>
+
+    <!--public void deleteEmp(Integer id);-->
+    <delete id="deleteEmp" parameterType="int">
+        DELETE FROM employee WHERE id=#{id}
+    </delete>
+    <!-- Employee getEmpByLastName(String lastName);-->
+    <select id="getEmpByLastName" parameterType="string" resultType="com.huanghe.springboot.bean.Employee">
+        select * from employee where lastName = #{lastName}
+    </select>
+
+
+
+
+
 </mapper>

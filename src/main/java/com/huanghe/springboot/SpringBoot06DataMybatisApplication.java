@@ -3,10 +3,18 @@ package com.huanghe.springboot;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 
+/**
+ * @Author: River
+ * 、@MapperScan("com.huanghe.springboot.mapper") :开启mappers扫描
+ * 、@EnableCaching：开启缓存配置，默认使用的是ConcurrentMapCacheManager
+ * 、在开发的时候使用的是缓存的中间件，redis,memcached
+ */
 
 @SpringBootApplication
 @MapperScan("com.huanghe.springboot.mapper")
+@EnableCaching
 public class SpringBoot06DataMybatisApplication {
 
 	public static void main(String[] args)

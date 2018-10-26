@@ -35,11 +35,4 @@ public class DeptController {
         return department;
     }
 
-
-    @GetMapping("/emp/{id}")
-    public Employee getEmp(@PathVariable("id") Integer id) {
-        return employeeMapper.getEmpById(id);
-    }
-
-
 }

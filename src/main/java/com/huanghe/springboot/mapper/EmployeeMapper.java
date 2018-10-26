@@ -15,4 +15,10 @@ public interface EmployeeMapper {
     public Employee getEmpById(Integer id);
 
     public void inserEmp(Employee employee);
+
+    public void updateEmp(Employee employee);
+
+    public void deleteEmp(Integer id);
+
+    Employee getEmpByLastName(String lastName);
 }

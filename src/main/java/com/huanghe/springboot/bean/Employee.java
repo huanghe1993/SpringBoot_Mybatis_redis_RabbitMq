@@ -1,11 +1,13 @@
 package com.huanghe.springboot.bean;
 
+import java.io.Serializable;
+
 /**
  * @Author: River
  * @Date:Created in  11:52 2018/10/24
  * @Description:
  */
-public class Employee {
+public class Employee implements Serializable{
     private Integer id;
     private String lastName;
     private Integer gender;

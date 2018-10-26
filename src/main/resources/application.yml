@@ -1,3 +1,4 @@
+
 spring:
   datasource:
     username: root
@@ -24,6 +25,27 @@ spring:
     useGlobalDataSourceStat: true
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
 
+  #配置redis
+  redis:
+      database: 0
+      # Redis服务器地址
+      host: 192.168.25.153
+      # Redis服务器连接端口
+      port: 6379
+      # Redis服务器连接密码（默认为空）
+      password:
+      # 连接池最大连接数（使用负值表示没有限制）
+      timeout: 0 # 连接超时时间（毫秒）
+      pool:
+        max-active: 8
+        # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: -1
+        # 连接池中的最大空闲连接
+        max-idle: 8
+        # 连接池中的最小空闲连接
+        min-idle: 0
+
+
      #配置schema:自动建表
 #    schema:
 #     - classpath:sql/department.sql
@@ -31,6 +53,25 @@ spring:
 mybatis:
   config-location: classpath:mybatis/mybatis-config.xml
   mapper-locations: classpath:mybatis/mapper/*.xml
+
+# 修改启动的端口号
+server:
+  port: 8081
+
+#开启SQl的语句的打印
+logging:
+    level:
+        com:
+            huanghe:
+                springboot:
+                    mapper: debug
+
+
+
+
+
+
+
 
 
 
