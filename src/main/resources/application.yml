@@ -45,6 +45,15 @@ spring:
         # 连接池中的最小空闲连接
         min-idle: 0
 
+  #配置RabbitMQ
+  rabbitmq:
+    #Rabbit的地址
+    host: 127.0.0.1
+    #RabbitMQ的用户名
+    port: 5672
+    username: huanghe
+    password: ab2453282
+
 
      #配置schema:自动建表
 #    schema:
@@ -53,7 +62,6 @@ spring:
 mybatis:
   config-location: classpath:mybatis/mybatis-config.xml
   mapper-locations: classpath:mybatis/mapper/*.xml
-
 # 修改启动的端口号
 server:
   port: 8081
