@@ -53,7 +53,13 @@ spring:
     port: 5672
     username: huanghe
     password: ab2453282
-
+  #配置发送邮箱的功能
+  mail:
+    username: 735597346@qq.com
+    # qq邮箱的授权码
+    password: ltitwzdativebfdh
+    host: smtp.qq.com
+    properties: {mail.smtp.ssl.enable: true}
 
      #配置schema:自动建表
 #    schema:
